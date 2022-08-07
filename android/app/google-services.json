@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "820964460910",
+    "project_id": "cakeaway-c2e56",
+    "storage_bucket": "cakeaway-c2e56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820964460910:android:9dc1f3d313aefc4bc9997f",
+        "android_client_info": {
+          "package_name": "com.ach.cakeaway"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "820964460910-cl6bgm00desgcotp8i7br88a2cjp9eq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf6n0crGxbNg2cg-HP0-GpEN4L9MdrBEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "820964460910-cl6bgm00desgcotp8i7br88a2cjp9eq4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "820964460910-vc81na6pqltpfea9e009mspiln8ucrdg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ach.cakeaway"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
