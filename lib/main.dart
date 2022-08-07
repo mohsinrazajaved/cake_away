@@ -51,7 +51,7 @@ class _AppState extends State<App> {
             }
 
             if (snapshot.connectionState == ConnectionState.done) {
-              return Terms(); //Splash();
+              return Splash();
             }
 
             return Center(
