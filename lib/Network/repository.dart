@@ -5,7 +5,6 @@ import 'package:cake_away/models/picitUser.dart';
 import 'package:cake_away/models/post.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:geolocator/geolocator.dart';
 import 'firebase_provider.dart';
 
 class Repository {
@@ -13,7 +12,13 @@ class Repository {
 
   Future<void> addDataToDb(User user,
           {String name, String phonenumber, String country, String city}) =>
-      _firebaseProvider.addDataToDb(user);
+      _firebaseProvider.addDataToDb(
+        user,
+        name: name,
+        phonenumber: phonenumber,
+        country: country,
+        city: city,
+      );
 
   Future<String> signIn(String email, String password) =>
       _firebaseProvider.signIn(email, password);

@@ -8,7 +8,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:easy_localization/easy_localization.dart';
 
@@ -23,7 +22,6 @@ class _OfferViewState extends State<OfferView>
     with AutomaticKeepAliveClientMixin<OfferView> {
   var key = GlobalKey<ScaffoldState>();
   bool _saving = false;
-  Position _currentPosition;
   final Key _mapKey = UniqueKey();
   var _repository = Repository();
   Future<List<DocumentSnapshot>> _future;
@@ -124,16 +122,22 @@ class _OfferViewState extends State<OfferView>
                       return ItemList(
                         item: posts[index],
                         ontap: () {
+                          DocumentSnapshot documentSnapshot = snapshot.data
+                              ?.firstWhere((data) =>
+                                  data.data()['postid'] == posts[index].postid);
                           if (currentUser == null) {
                             Widgets.showInSnackBar("Please Signup/Login", key);
                           } else {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: ((context) => PostDetailScreen(
+                                builder: ((context) =>
+                                    //Terms()
+
+                                    PostDetailScreen(
                                       user: _user,
                                       currentuser: _user,
-                                      documentSnapshot: snapshot.data[index],
+                                      documentSnapshot: documentSnapshot,
                                       onUpdate: () {
                                         retrieveUserDetails();
                                       },

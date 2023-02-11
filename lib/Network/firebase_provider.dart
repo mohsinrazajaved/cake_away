@@ -5,7 +5,6 @@ import 'package:cake_away/models/picitUser.dart';
 import 'package:cake_away/models/post.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
 

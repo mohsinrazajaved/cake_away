@@ -287,6 +287,11 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
               ],
             ),
           ),
+          Visibility(
+              visible: widget.documentSnapshot.data()['type'] !=
+                  "RequestType.Request",
+              child: makeTitle(
+                  "Price".tr(), widget.documentSnapshot.data()['price'])),
           makeTitle("City".tr(), widget.documentSnapshot.data()['city']),
           makeTitle("Country".tr(), widget.documentSnapshot.data()['country']),
           Visibility(

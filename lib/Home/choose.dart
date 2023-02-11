@@ -16,7 +16,6 @@ import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
-import 'package:geolocator/geolocator.dart';
 
 enum RequestType { Request, Offer }
 
@@ -44,7 +43,6 @@ class _ChooseState extends State<Choose> with AutomaticKeepAliveClientMixin {
   DateTime selectedDate;
 
   final picker = ImagePicker();
-  Position _currentPosition;
   var key = GlobalKey<ScaffoldState>();
 
   bool isVideo = false;
@@ -182,7 +180,7 @@ class _ChooseState extends State<Choose> with AutomaticKeepAliveClientMixin {
             title: titleController.text ?? "",
             city: cityController.text ?? "",
             country: countryController.text ?? "",
-            phonenumber: currentUser.phoneNumber ?? "",
+            phonenumber: user.phone ?? "",
             eventDate: dateString,
             dateTime: df.format(DateTime.now()),
             description: descriptionController?.text ?? "",

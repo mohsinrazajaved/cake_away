@@ -8,7 +8,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:easy_localization/easy_localization.dart';
 
@@ -23,7 +22,6 @@ class _RequestViewState extends State<RequestView>
     with AutomaticKeepAliveClientMixin<RequestView> {
   var key = GlobalKey<ScaffoldState>();
   bool _saving = false;
-  Position _currentPosition;
   final Key _mapKey = UniqueKey();
   var _repository = Repository();
   Future<List<DocumentSnapshot>> _future;
